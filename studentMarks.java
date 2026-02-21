@@ -86,3 +86,13 @@ public class studentMarks{
         System.out.println("The highest mark in the list is: " + max);
     }
 }
+
+class Student{
+    String name;
+    int studMarks;
+
+    Student(String name, int studMarks){
+        this.name = name;
+        this.studMarks = studMarks;
+    }
+}
