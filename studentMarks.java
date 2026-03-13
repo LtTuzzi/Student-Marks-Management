@@ -17,17 +17,17 @@ public class studentMarks{
 
         do{
         
-            System.out.println("1. Add new student marks: ");
-        System.out.println("2. Display all marks");
-        System.out.println("3. Calculate average");
-        System.out.println("4. Show highest mark");
-        System.out.println("5. Exit");
+         System.out.println("1. Add new student marks: ");
+         System.out.println("2. Display all marks");
+         System.out.println("3. Calculate average");
+         System.out.println("4. Show highest mark");
+         System.out.println("5. Exit");
 
-        System.out.println("What do you want to do?: ");
-        int choice = scanner.nextInt();
-        scanner.nextLine();
+         System.out.println("What do you want to do?: ");
+         choice = scanner.nextInt();
+         scanner.nextLine();
 
-        switch(choice){
+         switch(choice){
 
             case 1: 
                 //System.out.println("We are adding student marks");
@@ -46,10 +46,13 @@ public class studentMarks{
                 showHighMark(studMarks);
                 break;
             case 5:
-                System.out.println("It will be the exit soon");
+                System.out.println("Exiting...");
+                break;
+                
             
 
-        }
+         }
+        
         }while(choice != 5);
         
 
@@ -66,7 +69,7 @@ public class studentMarks{
         students.add(new Student(newStudName, newStudMark));
 
         //students.add(newMark);
-        System.out.println("The added marks: " + newStudName + ": " + newStudMark);
+        System.out.println("The added marks: " + newStudName + " : " + newStudMark);
         System.out.println("The list of marks: " + students);
 
        /* System.out.println("Enter the appropriate mark: ");
