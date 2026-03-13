@@ -35,7 +35,7 @@ public class studentMarks{
                 break;
             case 2:
                 //System.out.println("We are displaying all marks");
-                displayMarks(studMarks);
+                displayMarks(students);
                 break;
             case 3:
                 //System.out.println("We are calculating average");
@@ -81,9 +81,9 @@ public class studentMarks{
         */  
     }
 
-    static void displayMarks(ArrayList<Integer> studMarks){
+    static void displayMarks(ArrayList<Student> students){
         
-        System.out.println("All student marks: " + studMarks);
+        System.out.println("All student marks: " + students);
     }
 
     static void calcAve(ArrayList<Integer> studMarks){
