@@ -6,11 +6,13 @@ public class studentMarks{
 
     static Scanner scanner = new Scanner(System.in);
     private static int choice;
+    
 
     public static void main(String[] args) {
 
   
         ArrayList<Integer> studMarks = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
     
 
         do{
@@ -23,12 +25,13 @@ public class studentMarks{
 
         System.out.println("What do you want to do?: ");
         int choice = scanner.nextInt();
+        scanner.nextLine();
 
         switch(choice){
 
             case 1: 
                 //System.out.println("We are adding student marks");
-                addMarks(studMarks);
+                addMarks(students);
                 break;
             case 2:
                 //System.out.println("We are displaying all marks");
@@ -52,14 +55,27 @@ public class studentMarks{
 
     }
 
-    static void addMarks(ArrayList<Integer> studMarks){
-        
+    static void addMarks(ArrayList<Student> students){
+
+        System.out.println("Enter student name: ");
+        String newStudName = scanner.nextLine();
+        //scanner.nextLine();
         System.out.println("Enter the appropriate mark: ");
+        int newStudMark = scanner.nextInt();
+
+        students.add(new Student(newStudName, newStudMark));
+
+        //students.add(newMark);
+        System.out.println("The added marks: " + newStudName + ": " + newStudMark);
+        System.out.println("The list of marks: " + students);
+
+       /* System.out.println("Enter the appropriate mark: ");
         int newMark = scanner.nextInt();
 
         studMarks.add(newMark);
         System.out.println("The added mark: " + newMark);
         System.out.println("The list of marks: " + studMarks);
+        */  
     }
 
     static void displayMarks(ArrayList<Integer> studMarks){
@@ -85,14 +101,20 @@ public class studentMarks{
 
         System.out.println("The highest mark in the list is: " + max);
     }
-}
 
-class Student{
-    String name;
-    int studMarks;
+    static class Student{
+    String newStudName;
+    int newStudMark;
 
-    Student(String name, int studMarks){
-        this.name = name;
-        this.studMarks = studMarks;
+    Student(String newStudName, int newStudMark){
+        this.newStudName = newStudName;
+        this.newStudMark = newStudMark;
     }
+
+    public String toString(){
+        return newStudName + ": " + newStudMark;
+    }
+        
 }
+}
+
